@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevención del Suicidio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fffbea;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ffd60a;
+      color: #333;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 20px;
+    }
+
+    .balloon {
+      background-color: #ffe45e;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .balloon:hover {
+      transform: scale(1.05);
+    }
+
+    .info {
+      display: none;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 15px;
+      text-align: left;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff9c4;
+      border-top: 2px solid #ffd60a;
+    }
+
+    a {
+      color: #d4af37;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>💛 Prevención del Suicidio 💛</header>
+
+  <div class="container">
+    <div class="balloon" onclick="toggleInfo('info1')">¿Qué genera el bullying?</div>
+    <div class="balloon" onclick="toggleInfo('info2')">Factores de riesgo</div>
+    <div class="balloon" onclick="toggleInfo('info3')">¿Cuándo aumenta el riesgo?</div>
+  </div>
+
+  <!-- Información -->
+  <div id="info1" class="info">
+    <h3>¿Qué genera el bullying?</h3>
+    <p><b>El bullying (acoso escolar)</b> genera sufrimiento psicológico prolongado: ansiedad, tristeza, baja autoestima, aislamiento y sensación de indefensión.</p>
+    <p><b>No todas las personas que sufren bullying piensan en suicidarse</b>, ni todas las que tienen ideas suicidas han sufrido bullying. Pero está comprobado que el bullying puede afectar profundamente la salud mental y el bienestar emocional de quien lo padece.</p>
+  </div>
+
+  <div id="info2" class="info">
+    <h3>Factores de riesgo</h3>
+    <p><b>Estos factores son de riesgo</b> para que una persona desarrolle problemas de salud mental como depresión, ansiedad intensa o pensamientos suicidas.</p>
+    <p>Entre los factores de riesgo se encuentran la falta de apoyo familiar o social, los problemas económicos, los conflictos familiares, el abuso, el consumo de sustancias, o el sentirse rechazado o sin valor.</p>
+  </div>
+
+  <div id="info3" class="info">
+    <h3>¿Cuándo aumenta el riesgo?</h3>
+    <p><b>El riesgo aumenta</b> si la persona no cuenta con redes de apoyo (familia, amigos, docentes) o si ya tenía vulnerabilidades previas (problemas emocionales, situaciones familiares difíciles, etc.).</p>
+    <p>También puede aumentar en momentos de crisis, como la pérdida de un ser querido, un cambio importante en la vida o experiencias de maltrato o discriminación.</p>
+  </div>
+
+  <div class="video-section">
+    <h3>🎥 Te invitamos a ver este video</h3>
+    <p><a href="https://youtu.be/BT1FDbJQs_0?si=5fdCweFkzdVI7cN6" target="_blank">👉 Hacé clic aquí para ver el video</a></p>
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const section = document.getElementById(id);
+      const allInfo = document.querySelectorAll('.info');
+      allInfo.forEach(info => {
+        if (info.id !== id) info.style.display = 'none';
+      });
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
